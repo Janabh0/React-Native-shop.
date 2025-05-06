@@ -1,30 +1,22 @@
-import products from "@/data/products";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 
-const ProductItem = () => {
+interface ProductProps {
+  name: string;
+  img: string;
+  price: string;
+}
+
+const ProductItem = ({ name, img, price }: ProductProps) => {
   return (
-    <View style={{ flexDirection: "row", justifyContent: "center" }}>
-      <View style={{ margin: 10, alignItems: "center" }}>
-        <Image
-          source={{ uri: products[0].img }}
-          style={{ width: 140, height: 100, borderRadius: 10 }}
-        />
-        <Text style={{ marginTop: 5 }}>{products[0].name}</Text>
-        <Text>{products[0].price}</Text>
-      </View>
-
-      <View style={{ margin: 10, alignItems: "center" }}>
-        <Image
-          source={{ uri: products[1].img }}
-          style={{ width: 140, height: 100, borderRadius: 10 }}
-        />
-        <Text style={{ marginTop: 5 }}>{products[1].name}</Text>
-        <Text>{products[1].price}</Text>
-      </View>
+    <View style={{ margin: 10, alignItems: "center" }}>
+      <Image
+        source={{ uri: img }}
+        style={{ width: 110, height: 80, borderRadius: 10 }}
+      />
+      <Text style={{ marginTop: 5 }}>{name}</Text>
+      <Text>{price}</Text>
     </View>
   );
 };
 
 export default ProductItem;
-
-const styles = StyleSheet.create({});

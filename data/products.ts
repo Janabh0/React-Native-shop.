@@ -1,5 +1,3 @@
-// /data/products.ts
-
 interface Product {
   name: string;
   price: string;
@@ -11,6 +9,11 @@ const products: Product[] = [
     name: "Cafe book",
     price: "10",
     img: "https://sweatpantsandcoffee.com/wp-content/uploads/2019/11/Housing-Works-Bookstore-Cafe-600x400.jpg",
+  },
+  {
+    name: "Coffe book",
+    price: "15",
+    img: "https://thecreativeadventurer.com/wp-content/uploads/2022/10/IMG_1449.jpg",
   },
   {
     name: "The book tea",
